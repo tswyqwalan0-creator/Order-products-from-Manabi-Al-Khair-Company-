@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#087f5b">
+<meta name="description" content="منابع الخير للتجارة والاستيراد — منتجات غذائية واستهلاكية وخدمة طلب مباشرة عبر واتساب.">
+<title>منابع الخير للتجارة والاستيراد | الموقع الرسمي</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<style>
+:root{--green:#087f5b;--green2:#0ca678;--gold:#e9b949;--ink:#12302a}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:"Cairo",system-ui,sans-serif;background:#f7faf9;color:#17332d}
+.hero-bg{background:radial-gradient(circle at 15% 20%,rgba(233,185,73,.22),transparent 30%),radial-gradient(circle at 85% 70%,rgba(12,166,120,.25),transparent 35%),linear-gradient(135deg,#063d2e,#087f5b 55%,#0ca678)}
+.glass{background:rgba(255,255,255,.10);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.18)}
+.card{transition:.25s ease}
+.card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(8,127,91,.12)}
+.product-icon{background:linear-gradient(145deg,#f1f7f5,#fff)}
+.shadow-soft{box-shadow:0 10px 30px rgba(15,61,50,.08)}
+.no-scroll{overflow:hidden}
+.toast{animation:toast .25s ease}
+@keyframes toast{from{transform:translateY(15px);opacity:0}to{transform:none;opacity:1}}
+</style>
+</head>
+<body>
+
+<!-- Top notice -->
+<div class="bg-[#063d2e] text-white text-sm">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex flex-wrap gap-3 justify-center items-center">
+    <span><i class="fa-solid fa-circle-check text-amber-300"></i> الجودة والثقة وخدمة العملاء</span>
+    <span class="hidden sm:inline">•</span>
+    <span>أطلب تصلك أينما كنت</span>
+  </div>
+</div>
+
+<!-- Navigation -->
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="h-20 flex items-center justify-between gap-4">
+      <a href="#home" class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-2xl bg-emerald-700 text-white flex items-center justify-center text-2xl font-black shadow-soft">م</div>
+        <div>
+          <div class="font-black text-base sm:text-xl text-emerald-900">منابع الخير</div>
+          <div class="text-[11px] sm:text-xs text-gray-500">للتجارة والاستيراد</div>
+        </div>
+      </a>
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-bold">
+        <a href="#home" class="hover:text-emerald-700">الرئيسية</a>
+        <a href="#about" class="hover:text-emerald-700">من نحن</a>
+        <a href="#products" class="hover:text-emerald-700">المنتجات</a>
+        <a href="#why-us" class="hover:text-emerald-700">لماذا نحن</a>
+        <a href="#contact" class="hover:text-emerald-700">تواصل معنا</a>
+      </nav>
+      <button onclick="openCart()" class="relative bg-amber-400 hover:bg-amber-500 px-4 py-2.5 rounded-xl font-black text-gray-900 shadow transition">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="hidden sm:inline">السلة</span>
+        <span id="cartBadge" class="absolute -top-2 -left-2 min-w-6 h-6 px-1 rounded-full bg-emerald-900 text-white text-xs flex items-center justify-center">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+<!-- Hero -->
+<section class="hero-bg text-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 py-16 sm:py-24 grid lg:grid-cols-2 gap-10 items-center">
+    <div>
+      <span class="inline-flex items-center gap-2 bg-white/10 glass px-4 py-2 rounded-full text-sm font-bold mb-5">
+        <i class="fa-solid fa-star text-amber-300"></i> الموقع الرسمي لمنابع الخير
+      </span>
+      <h1 class="text-4xl sm:text-6xl font-black leading-tight mb-5">منابع الخير<br><span class="text-amber-300">للتجارة والاستيراد</span></h1>
+      <p class="text-emerald-50 text-base sm:text-lg leading-8 max-w-2xl">نوفر مجموعة متنوعة من المنتجات الغذائية والاستهلاكية، مع تجربة طلب سهلة ومباشرة عبر الموقع وواتساب.</p>
+      <div class="flex flex-wrap gap-3 mt-8">
+        <a href="#products" class="bg-amber-400 hover:bg-amber-300 text-gray-900 px-6 py-3 rounded-xl font-black transition"><i class="fa-solid fa-bag-shopping ml-2"></i>تصفح المنتجات</a>
+        <a href="#about" class="glass hover:bg-white/15 px-6 py-3 rounded-xl font-black transition">تعرف علينا</a>
+      </div>
+      <div class="grid grid-cols-3 gap-3 mt-10 max-w-lg">
+        <div class="glass rounded-2xl p-4"><div class="text-2xl font-black">28+</div><div class="text-xs text-emerald-100">منتجًا</div></div>
+        <div class="glass rounded-2xl p-4"><div class="text-2xl font-black">5</div><div class="text-xs text-emerald-100">أقسام</div></div>
+        <div class="glass rounded-2xl p-4"><div class="text-2xl font-black">24/7</div><div class="text-xs text-emerald-100">طلب إلكتروني</div></div>
+      </div>
+    </div>
+    <div class="hidden lg:block">
+      <div class="glass rounded-[2rem] p-8 shadow-2xl">
+        <div class="bg-white rounded-3xl p-8 text-gray-800">
+          <div class="flex items-center justify-between mb-8">
+            <div><div class="text-sm text-gray-500">تجربة الطلب</div><div class="text-2xl font-black text-emerald-900">سهلة ومباشرة</div></div>
+            <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-2xl"><i class="fa-solid fa-truck-fast"></i></div>
+          </div>
+          <div class="space-y-5">
+            <div class="flex gap-4 items-start"><span class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-black">1</span><div><b>اختر المنتجات</b><p class="text-sm text-gray-500">حدد الكمية وأضفها إلى السلة.</p></div></div>
+            <div class="flex gap-4 items-start"><span class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-black">2</span><div><b>أدخل بيانات الطلب</b><p class="text-sm text-gray-500">الاسم والهاتف والعنوان.</p></div></div>
+            <div class="flex gap-4 items-start"><span class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-black">3</span><div><b>أرسل عبر واتساب</b><p class="text-sm text-gray-500">يصلك فريق المبيعات لتأكيد الطلب.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <span class="text-emerald-700 font-black">من نحن</span>
+      <h2 class="text-3xl sm:text-4xl font-black mt-2 mb-5 text-gray-900">شركة منابع الخير للتجارة والاستيراد</h2>
+      <p class="text-gray-600 leading-8">شركة متخصصة في استيراد وتجارة وتوزيع المنتجات الغذائية والاستهلاكية، وتسعى إلى توفير منتجات ذات جودة عالية تلبي احتياجات المستهلكين والأسواق المحلية.</p>
+      <p class="text-gray-600 leading-8 mt-4">نعمل على بناء شراكات موثوقة مع الموردين والعملاء، وتوفير تشكيلة متنوعة من المنتجات بأسعار مناسبة، مع الاهتمام بجودة المنتجات وسلامة التخزين والتوزيع وسرعة وصولها إلى الأسواق.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4">
+      <div class="rounded-3xl bg-emerald-50 p-7"><i class="fa-solid fa-medal text-emerald-700 text-3xl"></i><h3 class="font-black text-xl mt-4">الجودة</h3><p class="text-gray-600 text-sm mt-2 leading-7">الاهتمام بجودة المنتجات والخدمة.</p></div>
+      <div class="rounded-3xl bg-amber-50 p-7"><i class="fa-solid fa-handshake text-amber-600 text-3xl"></i><h3 class="font-black text-xl mt-4">الثقة</h3><p class="text-gray-600 text-sm mt-2 leading-7">علاقات تجارية قائمة على الثقة والالتزام.</p></div>
+      <div class="rounded-3xl bg-gray-50 p-7"><i class="fa-solid fa-boxes-stacked text-emerald-700 text-3xl"></i><h3 class="font-black text-xl mt-4">تنوع</h3><p class="text-gray-600 text-sm mt-2 leading-7">تشكيلة من المنتجات الغذائية والاستهلاكية.</p></div>
+      <div class="rounded-3xl bg-gray-50 p-7"><i class="fa-solid fa-headset text-emerald-700 text-3xl"></i><h3 class="font-black text-xl mt-4">خدمة</h3><p class="text-gray-600 text-sm mt-2 leading-7">تجربة طلب إلكترونية سهلة ومباشرة.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Products -->
+<section id="products" class="py-16 bg-[#f7faf9]">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-5 mb-8">
+      <div><span class="text-emerald-700 font-black">كتالوج المنتجات</span><h2 class="text-3xl sm:text-4xl font-black mt-2">منتجاتنا</h2><p class="text-gray-500 mt-2">ابحث أو اختر القسم ثم أضف المنتجات إلى السلة.</p></div>
+      <div class="relative w-full lg:w-96">
+        <i class="fa-solid fa-magnifying-glass absolute right-4 top-3.5 text-gray-400"></i>
+        <input id="search" oninput="render()" class="w-full bg-white border rounded-2xl py-3 pr-11 pl-4 outline-none focus:ring-2 focus:ring-emerald-500" placeholder="ابحث عن منتج...">
+      </div>
+    </div>
+    <div id="categories" class="flex flex-wrap gap-2 mb-7"></div>
+    <div id="products" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"></div>
+    <div id="empty" class="hidden text-center bg-white rounded-3xl p-12 shadow-soft"><i class="fa-solid fa-box-open text-4xl text-gray-300"></i><p class="font-bold mt-4 text-gray-500">لا توجد منتجات مطابقة للبحث.</p></div>
+  </div>
+</section>
+
+<!-- Why -->
+<section id="why-us" class="py-16 bg-white">
+ <div class="max-w-7xl mx-auto px-4">
+  <div class="text-center max-w-2xl mx-auto"><span class="text-emerald-700 font-black">لماذا منابع الخير؟</span><h2 class="text-3xl sm:text-4xl font-black mt-2">تجربة تجارية أبسط</h2></div>
+  <div class="grid md:grid-cols-3 gap-6 mt-10">
+   <div class="card rounded-3xl border bg-white p-7 shadow-soft"><div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl"><i class="fa-solid fa-cart-shopping"></i></div><h3 class="font-black text-xl mt-5">طلب إلكتروني</h3><p class="text-gray-500 mt-2 leading-7">اختر المنتجات والكميات من الموقع وأرسل طلبك بسهولة.</p></div>
+   <div class="card rounded-3xl border bg-white p-7 shadow-soft"><div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl"><i class="fa-brands fa-whatsapp"></i></div><h3 class="font-black text-xl mt-5">تواصل مباشر</h3><p class="text-gray-500 mt-2 leading-7">يتم تجهيز رسالة الطلب وإرسالها مباشرة إلى رقم المبيعات عبر واتساب.</p></div>
+   <div class="card rounded-3xl border bg-white p-7 shadow-soft"><div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl"><i class="fa-solid fa-shield-heart"></i></div><h3 class="font-black text-xl mt-5">ثقة والتزام</h3><p class="text-gray-500 mt-2 leading-7">نسعى لبناء علاقات طويلة الأمد مع العملاء والشركاء.</p></div>
+  </div>
+ </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-16 hero-bg text-white">
+ <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+  <div><span class="text-amber-300 font-black">تواصل معنا</span><h2 class="text-3xl sm:text-4xl font-black mt-2">جاهزون لاستقبال طلبك</h2><p class="text-emerald-50 mt-4 leading-8">اختر المنتجات وأرسل طلبك عبر واتساب، وسيتم التواصل معك لتأكيد التفاصيل.</p></div>
+  <div class="glass rounded-3xl p-7">
+   <div class="flex items-center gap-4 mb-5"><div class="w-12 h-12 rounded-2xl bg-white text-emerald-700 flex items-center justify-center"><i class="fa-brands fa-whatsapp text-2xl"></i></div><div><div class="text-sm text-emerald-100">واتساب المبيعات</div><div class="font-black">778530110</div><div class="font-black">777808445</div></div></div>
+   <button onclick="openCart()" class="w-full bg-amber-400 text-gray-900 py-3 rounded-xl font-black hover:bg-amber-300">ابدأ طلبك الآن</button>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer class="bg-[#052e25] text-white">
+ <div class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+  <div><div class="font-black text-xl">منابع الخير</div><p class="text-emerald-100/70 text-sm mt-3 leading-7">للتجارة والاستيراد — الجودة التي تستحقها عائلتك.</p></div>
+  <div><div class="font-black mb-3">روابط سريعة</div><div class="space-y-2 text-sm text-emerald-100/80"><a class="block hover:text-white" href="#about">من نحن</a><a class="block hover:text-white" href="#products">المنتجات</a><a class="block hover:text-white" href="#contact">تواصل معنا</a></div></div>
+  <div><div class="font-black mb-3">اطلب الآن</div><p class="text-sm text-emerald-100/80">أرسل طلبك عبر واتساب من خلال السلة.</p></div>
+ </div>
+ <div class="border-t border-white/10 text-center text-xs text-emerald-100/60 py-4">© 2026 منابع الخير للتجارة والاستيراد — جميع الحقوق محفوظة</div>
+</footer>
+
+<!-- Cart modal -->
+<div id="cartModal" class="fixed inset-0 bg-black/60 hidden z-50 p-4 items-center justify-center">
+ <div class="bg-white rounded-3xl w-full max-w-2xl max-h-[92vh] overflow-y-auto">
+  <div class="p-5 border-b flex items-center justify-between sticky top-0 bg-white z-10">
+   <div><h3 class="font-black text-xl text-emerald-900">سلة الطلب</h3><p class="text-xs text-gray-500">راجع الكميات ثم أرسل الطلب.</p></div>
+   <button onclick="closeCart()" class="w-10 h-10 rounded-xl bg-gray-100 text-gray-500 text-xl">&times;</button>
+  </div>
+  <div class="p-5">
+   <div id="cartList"></div>
+   <div class="flex justify-between bg-emerald-50 rounded-2xl p-4 font-black mt-4"><span>إجمالي القطع</span><span id="totalQty">0</span></div>
+   <form onsubmit="submitOrder(event)" class="mt-5 space-y-3">
+    <h4 class="font-black text-gray-800">بيانات العميل</h4>
+    <input id="cName" required class="w-full border rounded-xl p-3 outline-none focus:ring-2 focus:ring-emerald-500" placeholder="الاسم الكامل *">
+    <div class="grid sm:grid-cols-2 gap-3">
+      <input id="cPhone" required class="w-full border rounded-xl p-3 outline-none focus:ring-2 focus:ring-emerald-500" placeholder="رقم الهاتف / واتساب *">
+      <input id="cLocation" required class="w-full border rounded-xl p-3 outline-none focus:ring-2 focus:ring-emerald-500" placeholder="المدينة والحي *">
+    </div>
+    <textarea id="cNotes" rows="3" class="w-full border rounded-xl p-3 outline-none focus:ring-2 focus:ring-emerald-500" placeholder="ملاحظات إضافية (اختياري)"></textarea>
+    <select id="waTarget" class="w-full border rounded-xl p-3 bg-emerald-50 font-bold">
+      <option value="967778530110">واتساب المبيعات: 778530110</option>
+      <option value="967777808445">واتساب المبيعات: 777808445</option>
+    </select>
+    <button class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3.5 rounded-xl font-black text-base"><i class="fa-brands fa-whatsapp ml-2"></i>إرسال الطلب عبر واتساب</button>
+   </form>
+  </div>
+ </div>
+</div>
+
+<div id="toast" class="fixed bottom-5 left-5 hidden z-[60] bg-gray-900 text-white px-5 py-3 rounded-2xl shadow-2xl text-sm font-bold"></div>
+
+<script>
+const products = [
+            // العصائر
+            { id: 1, name: "مسحوق عصير صفا (ليمون)", cat: "juices", icon: "" },
+            { id: 2, name: "مسحوق عصير صفا (توت)", cat: "juices", icon: "🫐" },
+            { id: 3, name: "مسحوق عصير صفا (أناناس)", cat: "juices", icon: "" },
+            { id: 4, name: "مسحوق عصير صفا (مانجو)", cat: "juices", icon: "🥭" },
+            { id: 5, name: "مسحوق عصير صفا (برتقال)", cat: "juices", icon: "" },
+            { id: 6, name: "مسحوق عصير صفا (كوكتيل)", cat: "juices", icon: "" },
+            { id: 7, name: "مسحوق عصير صفا (شمام / بطيخ / مشمش)", cat: "juices", icon: "" },
+            { id: 8, name: "شراب صفا مركز (مانجو / برتقال)", cat: "juices", icon: "🧃" },
+            { id: 9, name: "مشروب لا فريش La Fraiche (عرض 4 حبات - 1620 ريال)", cat: "juices", icon: "🥤" },
+
+            // الحليب والمعلبات
+            { id: 10, name: "شبيهة قشطة صفا (عادي / بنكهة العسل)", cat: "canned", icon: "" },
+            { id: 11, name: "قشطة منابع الخير الفاخرة", cat: "canned", icon: "🥣" },
+            { id: 12, name: "حليب منابع الخير المركز / شبيه صفا", cat: "canned", icon: "🥛" },
+            { id: 13, name: "مسحوق حليب صفا كامل الدسم (900غ / 1800غ)", cat: "canned", icon: "🥛" },
+            { id: 14, name: "معلبات صفا (فول / بازلاء / فاصوليا)", cat: "canned", icon: "🥫" },
+            { id: 15, name: "معلبات منابع الخير (فول / بازلاء / فاصوليا حمراء)", cat: "canned", icon: "🥫" },
+
+            // الحلويات والمخبوزات
+            { id: 16, name: "خليط كيك صفا (فانيلا / فراولة / شوكولاتة)", cat: "sweets", icon: "" },
+            { id: 17, name: "كريمة البندق مع الكاكاو صفا (أحجام حتى 1 كغ)", cat: "sweets", icon: "" },
+            { id: 18, name: "طحينة سائله نية منابع الخير (رحاب الخير 100%)", cat: "sweets", icon: "🫙" },
+            { id: 19, name: "حلاوة طحينية فاخرة (منابع الخير / رحاب الخير)", cat: "sweets", icon: "" },
+            { id: 20, name: "بيكربونات الصودا / باكينغ باودر صفا", cat: "sweets", icon: "🧁" },
+
+            // الصلصات والخل
+            { id: 21, name: "خل صفا الأبيض / خل تفاح", cat: "sauces", icon: "" },
+            { id: 22, name: "كاتشب حار / شطة حارة صفا", cat: "sauces", icon: "️" },
+            { id: 23, name: "دبس الرمان صفا", cat: "sauces", icon: "" },
+            { id: 24, name: "خبز صفا المطحون (بقسماط)", cat: "sauces", icon: "" },
+
+            // المنظفات
+            { id: 25, name: "سائل غسيل الصحون كلينزول", cat: "detergents", icon: "🧴" },
+            { id: 26, name: "صابون غسيل اليدين كلينزول (Breeze / Senses)", cat: "detergents", icon: "🧼" },
+            { id: 27, name: "شامبو العباية ومطري الملابس كلينزول", cat: "detergents", icon: "🧺" },
+            { id: 28, name: "منظف كلينزول متعدد الاستخدامات", cat: "detergents", icon: "🧽" }
+        ];
+const icons={juices:"🥤",canned:"🥫",sweets:"🍯",sauces:"🥫",detergents:"🧴"};
+const labels={juices:"العصائر والمشروبات",canned:"الحليب والمعلبات",sweets:"المخبوزات والطحينية",sauces:"الصلصات والخل",detergents:"المنظفات"};
+let category="all", cart={};
+
+function categories(){
+  const cats=[["all","الكل"],...Object.entries(labels)];
+  document.getElementById("categories").innerHTML=cats.map(([id,name])=>`
+    <button onclick="setCategory('${id}')" class="px-4 py-2.5 rounded-xl font-bold text-sm border transition ${category===id?"bg-emerald-700 text-white border-emerald-700":"bg-white text-gray-700 hover:border-emerald-400"}">${name}</button>`).join("");
+}
+function setCategory(c){category=c;categories();render();}
+function render(){
+  const q=(document.getElementById("search").value||"").trim().toLowerCase();
+  let list=products.filter(p=>(category==="all"||p.cat===category)&&p.name.toLowerCase().includes(q));
+  const box=document.getElementById("products");
+  document.getElementById("empty").classList.toggle("hidden",list.length>0);
+  box.innerHTML=list.map(p=>`
+    <article class="card bg-white rounded-3xl border p-4 flex flex-col shadow-soft">
+      <div class="product-icon rounded-2xl h-36 flex items-center justify-center text-6xl">${p.icon||icons[p.cat]||"📦"}</div>
+      <div class="flex-1 mt-4">
+        <div class="text-[11px] font-bold text-emerald-700 mb-1">${labels[p.cat]||"منتج"}</div>
+        <h3 class="font-black text-gray-900 leading-6">${escapeHtml(p.name)}</h3>
+      </div>
+      <div class="text-[11px] text-gray-400 font-bold mb-2">اختر الكمية والوحدة</div>\n      <div class="flex gap-2 mt-1 pt-3 border-t">
+        <input id="qty-${p.id}" type="number" min="1" value="1" class="w-16 border rounded-xl text-center font-black" aria-label="الكمية">
+        <select id="unit-${p.id}" class="flex-1 min-w-0 border rounded-xl px-2 font-bold text-sm bg-white" aria-label="وحدة الكمية">
+          <option value="حبة">حبة</option>
+          <option value="علبة">علبة</option>
+          <option value="كرتون">كرتون</option>
+          <option value="كيس">كيس</option>
+        </select>
+        <button onclick="add(${p.id})" class="px-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-black" aria-label="إضافة للسلة"><i class="fa-solid fa-plus"></i></button>
+      </div>
+    </article>`).join("");
+}
+function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));}
+function add(id){
+  const q=Math.max(1,parseInt(document.getElementById("qty-"+id).value)||1);
+  const unit=document.getElementById("unit-"+id).value;
+  if(!cart[id]) cart[id]={qty:0,unit};
+  cart[id].qty+=q;
+  cart[id].unit=unit;
+  updateCart(); toast(`تمت إضافة ${q} ${unit} إلى السلة`);
+}
+function updateCart(){
+  const ids=Object.keys(cart);
+  let total=0;
+  document.getElementById("cartBadge").textContent=ids.reduce((n,id)=>n+cart[id].qty,0);
+  document.getElementById("cartList").innerHTML=ids.length?ids.map(id=>{
+    const p=products.find(x=>x.id==id),item=cart[id],q=item.qty,unit=item.unit;
+    total+=q;
+    return `<div class="flex items-center gap-3 py-3 border-b">
+      <div class="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center text-2xl">${p.icon||icons[p.cat]||"📦"}</div>
+      <div class="flex-1">
+        <div class="font-bold text-sm">${escapeHtml(p.name)}</div>
+        <div class="text-xs text-emerald-700 font-bold mt-1">${q} ${unit}</div>
+        <select onchange="changeUnit(${id},this.value)" class="mt-2 border rounded-lg px-2 py-1 text-xs font-bold bg-white">
+          <option value="حبة" ${unit==="حبة"?"selected":""}>حبة</option>
+          <option value="علبة" ${unit==="علبة"?"selected":""}>علبة</option>
+          <option value="كرتون" ${unit==="كرتون"?"selected":""}>كرتون</option>
+          <option value="كيس" ${unit==="كيس"?"selected":""}>كيس</option>
+        </select>
+      </div>
+      <div class="flex items-center gap-1">
+        <button onclick="changeQty(${id},-1)" class="w-8 h-8 rounded-lg bg-gray-100 font-black">−</button>
+        <span class="min-w-7 text-center font-black">${q}</span>
+        <button onclick="changeQty(${id},1)" class="w-8 h-8 rounded-lg bg-gray-100 font-black">+</button>
+      </div>
+      <button onclick="removeItem(${id})" class="text-red-500 w-9 h-9 rounded-lg hover:bg-red-50"><i class="fa-solid fa-trash"></i></button>
+    </div>`}).join(""):`<div class="text-center py-12 text-gray-400"><i class="fa-solid fa-cart-shopping text-4xl"></i><p class="font-bold mt-3">السلة فارغة</p></div>`;
+  document.getElementById("totalQty").textContent=total;
+}
+function changeQty(id,delta){
+  if(!cart[id]) return;
+  cart[id].qty+=delta;
+  if(cart[id].qty<=0) delete cart[id];
+  updateCart();
+}
+function changeUnit(id,unit){
+  if(cart[id]) cart[id].unit=unit;
+  updateCart();
+}
+function removeItem(id){delete cart[id];updateCart();toast("تم حذف المنتج");}
+function openCart(){updateCart();document.getElementById("cartModal").classList.remove("hidden");document.getElementById("cartModal").classList.add("flex");document.body.classList.add("no-scroll");}
+function closeCart(){document.getElementById("cartModal").classList.add("hidden");document.getElementById("cartModal").classList.remove("flex");document.body.classList.remove("no-scroll");}
+function submitOrder(e){
+ e.preventDefault();
+ if(!Object.keys(cart).length){toast("أضف منتجًا إلى السلة أولًا");return;}
+ const name=document.getElementById("cName").value.trim();
+ const phone=document.getElementById("cPhone").value.trim();
+ const location=document.getElementById("cLocation").value.trim();
+ const notes=document.getElementById("cNotes").value.trim();
+ const target=document.getElementById("waTarget").value;
+ let items="",total=0;
+ Object.keys(cart).forEach((id,i)=>{const p=products.find(x=>x.id==id);const item=cart[id];const q=item.qty;const unit=item.unit;total+=q;items+=`${i+1}. ${p.name} — الكمية: ${q} ${unit}\n`;});
+ const msg=`🛍️ *طلب جديد - منابع الخير للتجارة والاستيراد*\n\n*بيانات العميل:*\n• الاسم: ${name}\n• الهاتف: ${phone}\n• العنوان: ${location}\n${notes?`• ملاحظات: ${notes}\n`:""}\n*المنتجات المطلوبة:*\n${items}\n*إجمالي القطع: ${total}*\n\nيرجى تأكيد استلام الطلب والتوصيل.`;
+ window.open(`https://wa.me/${target}?text=${encodeURIComponent(msg)}`,"_blank");
+}
+function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.classList.remove("hidden");t.classList.add("toast");setTimeout(()=>t.classList.add("hidden"),2200);}
+document.getElementById("cartModal").addEventListener("click",e=>{if(e.target.id==="cartModal")closeCart();});
+categories();render();updateCart();
+</script>
+</body>
+</html>
